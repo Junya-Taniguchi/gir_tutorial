@@ -1,0 +1,308 @@
+Last login: Wed Oct 10 01:41:38 on ttys002
+You have mail.
+-bash: renv: command not found
+-bash: evel: command not found
+-bash: evalexport PATH="/Users/taniguchi/.rbenv/shims:${PATH}"
+export RBENV_SHELL=bash
+source '/usr/local/Cellar/rbenv/1.1.0/libexec/../completions/rbenv.bash'
+command rbenv rehash 2>/dev/null
+rbenv() {
+  local command
+  command="$1"
+  if [ "$#" -gt 0 ]; then
+    shift
+  fi
+
+  case "$command" in
+  rehash|shell)
+    eval "$(rbenv "sh-$command" "$@")";;
+  *)
+    command rbenv "$command" "$@";;
+  esac
+}: No such file or directory
+taniguchijunya-no-iMac:~ taniguchi$ vagrant box add laravel/homestead
+
+==> box: Loading metadata for box 'laravel/homestead'
+    box: URL: https://vagrantcloud.com/laravel/homestead
+This box can work with multiple providers! The providers that it
+can work with are listed below. Please review the list and choose
+the provider you will be working with.
+
+1) hyperv
+2) parallels
+3) virtualbox
+4) vmware_desktop
+
+Enter your choice: Invalid choice. Try again: 3
+==> box: Adding box 'laravel/homestead' (v6.3.0) for provider: virtualbox
+The box you're attempting to add already exists. Remove it before
+adding it again or add it with the `--force` flag.
+
+Name: laravel/homestead
+Provider: virtualbox
+Version: 6.3.0
+taniguchijunya-no-iMac:~ taniguchi$ cd desktop/add
+taniguchijunya-no-iMac:add taniguchi$ git clone https://github.com/laravel/homestead.git Homestead
+Cloning into 'Homestead'...
+remote: Enumerating objects: 28, done.
+remote: Counting objects: 100% (28/28), done.
+remote: Compressing objects: 100% (21/21), done.
+remote: Total 3125 (delta 11), reused 19 (delta 6), pack-reused 3097
+Receiving objects: 100% (3125/3125), 656.07 KiB | 963.00 KiB/s, done.
+Resolving deltas: 100% (1862/1862), done.
+taniguchijunya-no-iMac:add taniguchi$ cd Homestead
+taniguchijunya-no-iMac:Homestead taniguchi$ bash init.sh
+Homestead initialized!
+taniguchijunya-no-iMac:Homestead taniguchi$ cd
+taniguchijunya-no-iMac:~ taniguchi$ ls -la I grep .ssh
+ls: I: No such file or directory
+ls: grep: No such file or directory
+.ssh:
+total 32
+drwx------    6 taniguchi  staff   204  4  1  2018 .
+drwxr-xr-x+ 111 taniguchi  staff  3774 10 10 01:43 ..
+-rw-r--r--    1 taniguchi  staff   147  4  1  2018 config
+-rw-------    1 taniguchi  staff  1679  4  1  2018 id_rsa
+-rw-r--r--    1 taniguchi  staff   398  4  1  2018 id_rsa.pub
+-rw-r--r--    1 taniguchi  staff   616  8  6  2017 known_hosts
+taniguchijunya-no-iMac:~ taniguchi$ cd desktop/add
+taniguchijunya-no-iMac:add taniguchi$ cd Homestead
+taniguchijunya-no-iMac:Homestead taniguchi$ vagrant up
+Bringing machine 'homestead-7' up with 'virtualbox' provider...
+==> homestead-7: Importing base box 'laravel/homestead'...
+==> homestead-7: Matching MAC address for NAT networking...
+==> homestead-7: Checking if box 'laravel/homestead' is up to date...
+==> homestead-7: Setting the name of the VM: homestead-7
+==> homestead-7: Clearing any previously set network interfaces...
+There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["hostonlyif", "create"]
+
+Stderr: 0%...
+Progress state: NS_ERROR_FAILURE
+VBoxManage: error: Failed to create the host-only adapter
+VBoxManage: error: VBoxNetAdpCtl: Error while adding new interface: failed to open /dev/vboxnetctl: No such file or directory
+VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component HostNetworkInterfaceWrap, interface IHostNetworkInterface
+VBoxManage: error: Context: "RTEXITCODE handleCreate(HandlerArg *)" at line 94 of file VBoxManageHostonly.cpp
+
+taniguchijunya-no-iMac:Homestead taniguchi$ inconfig
+-bash: inconfig: command not found
+taniguchijunya-no-iMac:Homestead taniguchi$ vagrant up
+Bringing machine 'homestead-7' up with 'virtualbox' provider...
+==> homestead-7: Checking if box 'laravel/homestead' is up to date...
+==> homestead-7: Clearing any previously set network interfaces...
+There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["hostonlyif", "create"]
+
+Stderr: 0%...
+Progress state: NS_ERROR_FAILURE
+VBoxManage: error: Failed to create the host-only adapter
+VBoxManage: error: VBoxNetAdpCtl: Error while adding new interface: failed to open /dev/vboxnetctl: No such file or directory
+VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component HostNetworkInterfaceWrap, interface IHostNetworkInterface
+VBoxManage: error: Context: "RTEXITCODE handleCreate(HandlerArg *)" at line 94 of file VBoxManageHostonly.cpp
+
+taniguchijunya-no-iMac:Homestead taniguchi$ sudo /Library/StartupItems/VirtualBox/VirtualBox restart
+Password:
+sudo: /Library/StartupItems/VirtualBox/VirtualBox: command not found
+taniguchijunya-no-iMac:Homestead taniguchi$ vagrant up
+Bringing machine 'homestead-7' up with 'virtualbox' provider...
+==> homestead-7: Checking if box 'laravel/homestead' is up to date...
+==> homestead-7: Clearing any previously set network interfaces...
+There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["hostonlyif", "create"]
+
+Stderr: 0%...
+Progress state: NS_ERROR_FAILURE
+VBoxManage: error: Failed to create the host-only adapter
+VBoxManage: error: VBoxNetAdpCtl: Error while adding new interface: failed to open /dev/vboxnetctl: No such file or directory
+VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component HostNetworkInterfaceWrap, interface IHostNetworkInterface
+VBoxManage: error: Context: "RTEXITCODE handleCreate(HandlerArg *)" at line 94 of file VBoxManageHostonly.cpp
+
+taniguchijunya-no-iMac:Homestead taniguchi$ udo launchctl load /Library/LaunchDaemons/org.virtualbox.startup.plist
+-bash: udo: command not found
+taniguchijunya-no-iMac:Homestead taniguchi$ sudo /Library/StartupItems/VirtualBox/VirtualBox restart
+sudo: /Library/StartupItems/VirtualBox/VirtualBox: command not found
+taniguchijunya-no-iMac:Homestead taniguchi$ sudo /Library/StartupItems/VirtualBox/VirtualBox restart
+sudo: /Library/StartupItems/VirtualBox/VirtualBox: command not found
+taniguchijunya-no-iMac:Homestead taniguchi$ sudo "/Library/Application Support/VirtualBox/LaunchDaemons/VirtualBoxStartup.sh" restart
+Loading VBoxDrv.kext
+/Library/Application Support/VirtualBox/VBoxDrv.kext failed to load - (libkern/kext) system policy prevents loading; check the system/kernel logs for errors or try kextutil(8).
+Error: Failed to load /Library/Application Support/VirtualBox/VBoxDrv.kext
+Loading VBoxUSB.kext
+/Library/Application Support/VirtualBox/VBoxUSB.kext failed to load - (libkern/kext) dependency load failed; check the system/kernel logs for errors or try kextutil(8).
+Error: Failed to load /Library/Application Support/VirtualBox/VBoxUSB.kext
+Loading VBoxNetFlt.kext
+/Library/Application Support/VirtualBox/VBoxNetFlt.kext failed to load - (libkern/kext) dependency load failed; check the system/kernel logs for errors or try kextutil(8).
+Error: Failed to load /Library/Application Support/VirtualBox/VBoxNetFlt.kext
+Loading VBoxNetAdp.kext
+/Library/Application Support/VirtualBox/VBoxNetAdp.kext failed to load - (libkern/kext) dependency load failed; check the system/kernel logs for errors or try kextutil(8).
+Error: Failed to load /Library/Application Support/VirtualBox/VBoxNetAdp.kext
+(kernel) Kext org.virtualbox.kext.VBoxNetAdp not found for unload request.
+Failed to unload org.virtualbox.kext.VBoxNetAdp - (libkern/kext) not found.
+(kernel) Kext org.virtualbox.kext.VBoxNetFlt not found for unload request.
+Failed to unload org.virtualbox.kext.VBoxNetFlt - (libkern/kext) not found.
+(kernel) Kext org.virtualbox.kext.VBoxUSB not found for unload request.
+Failed to unload org.virtualbox.kext.VBoxUSB - (libkern/kext) not found.
+(kernel) Kext org.virtualbox.kext.VBoxDrv not found for unload request.
+Failed to unload org.virtualbox.kext.VBoxDrv - (libkern/kext) not found.
+Fatal error: VirtualBox
+taniguchijunya-no-iMac:Homestead taniguchi$ vagrant up
+Bringing machine 'homestead-7' up with 'virtualbox' provider...
+==> homestead-7: Checking if box 'laravel/homestead' is up to date...
+==> homestead-7: Clearing any previously set network interfaces...
+There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["hostonlyif", "create"]
+
+Stderr: 0%...
+Progress state: NS_ERROR_FAILURE
+VBoxManage: error: Failed to create the host-only adapter
+VBoxManage: error: VBoxNetAdpCtl: Error while adding new interface: failed to open /dev/vboxnetctl: No such file or directory
+VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component HostNetworkInterfaceWrap, interface IHostNetworkInterface
+VBoxManage: error: Context: "RTEXITCODE handleCreate(HandlerArg *)" at line 94 of file VBoxManageHostonly.cpp
+
+taniguchijunya-no-iMac:Homestead taniguchi$ vagrant up
+Bringing machine 'homestead-7' up with 'virtualbox' provider...
+==> homestead-7: Checking if box 'laravel/homestead' is up to date...
+==> homestead-7: Clearing any previously set network interfaces...
+There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["hostonlyif", "create"]
+
+Stderr: 0%...
+Progress state: NS_ERROR_FAILURE
+VBoxManage: error: Failed to create the host-only adapter
+VBoxManage: error: VBoxNetAdpCtl: Error while adding new interface: failed to open /dev/vboxnetctl: No such file or directory
+VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component HostNetworkInterfaceWrap, interface IHostNetworkInterface
+VBoxManage: error: Context: "RTEXITCODE handleCreate(HandlerArg *)" at line 94 of file VBoxManageHostonly.cpp
+
+taniguchijunya-no-iMac:Homestead taniguchi$ sudo "/Library/Application Support/VirtualBox/LaunchDaemons/VirtualBoxStartup.sh" restart
+Loading VBoxDrv.kext
+/Library/Application Support/VirtualBox/VBoxDrv.kext failed to load - (libkern/kext) system policy prevents loading; check the system/kernel logs for errors or try kextutil(8).
+Error: Failed to load /Library/Application Support/VirtualBox/VBoxDrv.kext
+Loading VBoxUSB.kext
+/Library/Application Support/VirtualBox/VBoxUSB.kext failed to load - (libkern/kext) dependency load failed; check the system/kernel logs for errors or try kextutil(8).
+Error: Failed to load /Library/Application Support/VirtualBox/VBoxUSB.kext
+Loading VBoxNetFlt.kext
+/Library/Application Support/VirtualBox/VBoxNetFlt.kext failed to load - (libkern/kext) dependency load failed; check the system/kernel logs for errors or try kextutil(8).
+Error: Failed to load /Library/Application Support/VirtualBox/VBoxNetFlt.kext
+Loading VBoxNetAdp.kext
+/Library/Application Support/VirtualBox/VBoxNetAdp.kext failed to load - (libkern/kext) dependency load failed; check the system/kernel logs for errors or try kextutil(8).
+Error: Failed to load /Library/Application Support/VirtualBox/VBoxNetAdp.kext
+(kernel) Kext org.virtualbox.kext.VBoxNetAdp not found for unload request.
+Failed to unload org.virtualbox.kext.VBoxNetAdp - (libkern/kext) not found.
+(kernel) Kext org.virtualbox.kext.VBoxNetFlt not found for unload request.
+Failed to unload org.virtualbox.kext.VBoxNetFlt - (libkern/kext) not found.
+(kernel) Kext org.virtualbox.kext.VBoxUSB not found for unload request.
+Failed to unload org.virtualbox.kext.VBoxUSB - (libkern/kext) not found.
+(kernel) Kext org.virtualbox.kext.VBoxDrv not found for unload request.
+Failed to unload org.virtualbox.kext.VBoxDrv - (libkern/kext) not found.
+Fatal error: VirtualBox
+taniguchijunya-no-iMac:Homestead taniguchi$ vagrant up
+Bringing machine 'homestead-7' up with 'virtualbox' provider...
+==> homestead-7: Importing base box 'laravel/homestead'...
+==> homestead-7: Matching MAC address for NAT networking...
+==> homestead-7: Checking if box 'laravel/homestead' is up to date...
+==> homestead-7: Setting the name of the VM: homestead-7
+==> homestead-7: Clearing any previously set network interfaces...
+There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["hostonlyif", "create"]
+
+Stderr: 0%...
+Progress state: NS_ERROR_FAILURE
+VBoxManage: error: Failed to create the host-only adapter
+VBoxManage: error: VBoxNetAdpCtl: Error while adding new interface: failed to open /dev/vboxnetctl: No such file or directory
+VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component HostNetworkInterfaceWrap, interface IHostNetworkInterface
+VBoxManage: error: Context: "RTEXITCODE handleCreate(HandlerArg *)" at line 94 of file VBoxManageHostonly.cpp
+
+taniguchijunya-no-iMac:Homestead taniguchi$ 
+  [復元日時2018/10/10 13:29:03]
+Last login: Wed Oct 10 10:24:53 on tty??
+You have mail.
+-bash: renv: command not found
+-bash: evel: command not found
+-bash: evalexport PATH="/Users/taniguchi/.rbenv/shims:${PATH}"
+export RBENV_SHELL=bash
+source '/usr/local/Cellar/rbenv/1.1.0/libexec/../completions/rbenv.bash'
+command rbenv rehash 2>/dev/null
+rbenv() {
+  local command
+  command="$1"
+  if [ "$#" -gt 0 ]; then
+    shift
+  fi
+
+  case "$command" in
+  rehash|shell)
+    eval "$(rbenv "sh-$command" "$@")";;
+  *)
+    command rbenv "$command" "$@";;
+  esac
+}: No such file or directory
+taniguchijunya-no-iMac:Homestead taniguchi$ cd desktop
+-bash: cd: desktop: No such file or directory
+taniguchijunya-no-iMac:Homestead taniguchi$ mkdir git_tutorial
+taniguchijunya-no-iMac:Homestead taniguchi$ cd..
+-bash: cd..: command not found
+taniguchijunya-no-iMac:Homestead taniguchi$ cd
+taniguchijunya-no-iMac:~ taniguchi$ cd desktop
+taniguchijunya-no-iMac:desktop taniguchi$ mkdir git_tutorial
+taniguchijunya-no-iMac:desktop taniguchi$ cd git_tutorial
+taniguchijunya-no-iMac:git_tutorial taniguchi$ git init
+Initialized empty Git repository in /Users/taniguchi/Desktop/git_tutorial/.git/
+taniguchijunya-no-iMac:git_tutorial taniguchi$ ls -a
+.	..	.git
+taniguchijunya-no-iMac:git_tutorial taniguchi$ ls .git/
+HEAD		config		hooks		objects
+branches	description	info		refs
+taniguchijunya-no-iMac:git_tutorial taniguchi$ cd desktop
+-bash: cd: desktop: No such file or directory
+taniguchijunya-no-iMac:git_tutorial taniguchi$ cd 
+taniguchijunya-no-iMac:~ taniguchi$ cd desktop
+taniguchijunya-no-iMac:desktop taniguchi$ git clone https://github.com/atom/atom.git
+Cloning into 'atom'...
+remote: Enumerating objects: 44, done.
+remote: Counting objects: 100% (44/44), done.
+remote: Compressing objects: 100% (33/33), done.
+remote: Total 191108 (delta 26), reused 21 (delta 11), pack-reused 191064
+Receiving objects: 100% (191108/191108), 295.88 MiB | 6.61 MiB/s, done.
+Resolving deltas: 100% (135853/135853), done.
+taniguchijunya-no-iMac:desktop taniguchi$ cd git_tutorial
+taniguchijunya-no-iMac:git_tutorial taniguchi$ ls
+index.html
+taniguchijunya-no-iMac:git_tutorial taniguchi$ git add .
+taniguchijunya-no-iMac:git_tutorial taniguchi$ git commit
+
+initial commit
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#       new file:   index.html
+#
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+-- INSERT --
